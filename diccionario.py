@@ -2,7 +2,7 @@
 import tkinter as tk
 from tkinter import *
 import webbrowser as wb
-
+import re
 ventana = tk.Tk()
 ventana.geometry("500x500")
 ventana.title("Diccionario")
@@ -10,10 +10,19 @@ entry = tk.Entry(ventana, width=30)
 entry.pack()
 def busqueda():
     text = entry.get()
-    text_final = "https://dle.rae.es/" + text
-    wb.open(text_final)
+    if text == "":
+        return
+    elif re.match(r'^\d+(?:,\d+)*(?:\.\d+)?$', text):
+        return
+    elif re.match(r'^[+-]?\d+(?:,\d+)*([+\-*].\d+)?$|^\d+$', text):
+        return
+    else:
+     text_final = "https://dle.rae.es/" + text
+     wb.open(text_final)
 
 
 button = tk.Button(ventana,text="Buscar", command=busqueda)
 button.pack()
+license = Label(ventana, text="Licenciado bajo GPL-3.0 o superior")
+license.pack(side=tk.BOTTOM, fill=tk.X, padx=10, pady=5)
 ventana.mainloop()
