@@ -1,6 +1,6 @@
 # vortaroES
 
-Una sencilla aplicacion que permite acceder al diccionario de la RAE de forma grafica introduces una palabra en el cuadro de texto presionas buscar y ya esta
+A simple application that allows you to access the dictionary of the RAE dictionary graphically enter a word in the text box press search and you're done.
 
 # TODO List
 
