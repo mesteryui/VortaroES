@@ -1,4 +1,4 @@
-# vortaroES
+# VortaroES
 
 A simple application that allows you to access the dictionary of the RAE dictionary graphically enter a word in the text box press search and you're done.
 
