@@ -6,4 +6,4 @@ Una sencilla aplicacion que permite acceder al diccionario de la RAE de forma gr
 
 - [ ] Add esperanto dictionary
 - [ ] Add English dictionary
-- [ ] Add languages
+- [ ] Add languages to interface
