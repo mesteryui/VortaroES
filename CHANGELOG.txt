@@ -1,0 +1,7 @@
+2024-08-23  Mónica Gómez (Autumn64)
+    - Agregado webview de Tkinter.
+    - Abre sitio web de la RAE dentro del webview.
+    - Uso de `urllib` para el correcto parseo de la URL.
+    - Refactorización de código.
+    - Utilización de entorno virtual (venv) para el desarrollo del programa.
+    - Establecimiento de sencillas políticas de contribución.
