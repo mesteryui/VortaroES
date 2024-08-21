@@ -1,0 +1,15 @@
+{
+  "es": {
+  "license": "Licenciado bajo",
+  "search_button": "Buscar"
+
+  },
+  "en": {
+  "license": "Licensed under",
+  "search_button": "Search"
+  },
+  "eo": {
+  "license": "Rajtante sub",
+  "search_button": "Serĉi"
+  }
+}
