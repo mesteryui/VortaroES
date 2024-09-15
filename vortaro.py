@@ -14,15 +14,19 @@ General Public License for more details.
 You should have received a copy of the GNU General Public License 
 along with this program. If not, see <https://www.gnu.org/licenses/>. 
 """
+# Librerias a importar
 import tkinter as tk
+from tkinter import ttk
 from tkinter import *
 import tkinterweb
 import urllib.parse
 import re
-import json
 
+# Funcion principal de busqueda
 def busqueda():
+    # Obtencion de entrada
     text = entry.get()
+    # Sistema para evitar que se busque texto que no tiene sentido buscar
     if text == "":
         return
     elif re.match(r'^\d+(?:,\d+)*(?:\.\d+)?$', text):
@@ -31,25 +35,31 @@ def busqueda():
     elif re.match(r'^[+-]?\d+(?:,\d+)*([+\-*].\d+)?$|^\d+$', text):
         print("omit")
         return
+    # En caso de que el texto si tenga sentido
     else:
         text_final = "https://dle.rae.es/" + urllib.parse.quote(text)
         webframe.load_website(text_final)
-def change_language():
-    with open('languages.json') as f:
-        data = json.load(f)
+
 if __name__ == "__main__":
     ventana = tk.Tk()
+    estilo_elementos = ttk.Style()
+    # Configuraciones de estilo para diversos elementos
+    estilo_elementos.configure("TLabel", background="#1e1e2e", foreground="#cdd6f4")
+    estilo_elementos.configure("TButton", background="#585b70", foreground="#cdd6f4")
+    estilo_elementos.map("TButton", background=[("active", "#45475a")], foreground=[("active", "#cdd6f4")])
+    # Ajustes diversos de la ventana
     ventana.geometry("750x720")
     ventana.title("VortaroES")
-    entry = tk.Entry(ventana, width=30)
+    ventana["bg"] = "#1e1e2e"
+    entry = ttk.Entry(ventana, width=30)
     entry.pack()
-    frame = tk.Frame(ventana,height=380, width=499)
+    frame = ttk.Frame(ventana,height=380, width=499)
     webframe = tkinterweb.HtmlFrame(frame)
-    button = tk.Button(ventana,text="Buscar", command=busqueda)
+    button = ttk.Button(ventana,text="Buscar", command=busqueda)
     button.pack()
     frame.pack(fill=None, expand=False)
     webframe.pack()
-    license = Label(ventana, text="Licenciado bajo GPL-3.0 o superior")
-    license.pack(side=tk.BOTTOM, fill=tk.X, padx=10, pady=5)
+    license = ttk.Label(ventana, text="Licenciado bajo GPL-3.0 o superior")
+    license.pack(side=tk.BOTTOM)
     ventana.mainloop()
     
