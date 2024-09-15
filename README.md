@@ -8,7 +8,7 @@ A simple application that allows you to access the RAE dictionary, made in Tkint
 - [ ] Add English dictionary
 - [ ] Add languages to interface
 
-**Advertasing**: Now the application only support search from the search bar but no if you click in the links, that won't work
+**Warning**: Now the application only support search from the search bar but no if you click in the links, that won't work
 # AppImage
 The AppImage versions (for GNU/Linux users) need `tkinter`, which can be installed with these commands depending on the distro:
 
