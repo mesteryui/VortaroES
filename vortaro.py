@@ -59,7 +59,6 @@ if __name__ == "__main__":
     button.pack()
     frame.pack(fill=None, expand=False)
     webframe.pack()
-    license = ttk.Label(ventana, text="Licenciado bajo GPL-3.0 o superior")
     license.pack(side=tk.BOTTOM)
     ventana.mainloop()
     
