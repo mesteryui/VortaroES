@@ -59,6 +59,5 @@ if __name__ == "__main__":
     button.pack()
     frame.pack(fill=None, expand=False)
     webframe.pack()
-    license.pack(side=tk.BOTTOM)
     ventana.mainloop()
     
