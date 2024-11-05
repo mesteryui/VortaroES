@@ -17,10 +17,11 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 # Librerias a importar
 import tkinter as tk
 from tkinter import ttk
-from tkinter import *
 import tkinterweb
 import urllib.parse
 import re
+from catppuccin import PALETTE
+
 
 # Funcion principal de busqueda
 def busqueda():
@@ -41,12 +42,17 @@ def busqueda():
         webframe.load_website(text_final)
 
 if __name__ == "__main__":
+    color_fondo = PALETTE.mocha.colors.mantle.hex
+    color_base = PALETTE.mocha.colors.base.hex
+    color_texto = PALETTE.mocha.colors.text.hex
+    color_boton = PALETTE.mocha.colors.surface2.hex
+    color_boton_activo = PALETTE.mocha.colors.surface1.hex
     ventana = tk.Tk()
     estilo_elementos = ttk.Style()
     # Configuraciones de estilo para diversos elementos
-    estilo_elementos.configure("TLabel", background="#1e1e2e", foreground="#cdd6f4")
-    estilo_elementos.configure("TButton", background="#585b70", foreground="#cdd6f4")
-    estilo_elementos.map("TButton", background=[("active", "#45475a")], foreground=[("active", "#cdd6f4")])
+    estilo_elementos.configure("TLabel", background=color_fondo, foreground=color_texto)
+    estilo_elementos.configure("TButton", background=color_boton, foreground=color_texto)
+    estilo_elementos.map("TButton", background=[("active", color_boton_activo)], foreground=[("active", color_texto)])
     # Ajustes diversos de la ventana
     ventana.geometry("750x720")
     ventana.title("VortaroES")
@@ -57,7 +63,7 @@ if __name__ == "__main__":
     webframe = tkinterweb.HtmlFrame(frame)
     button = ttk.Button(ventana,text="Buscar", command=busqueda)
     button.pack()
-    frame.pack(fill=None, expand=False)
+    frame.pack(expand=False)
     webframe.pack()
     ventana.mainloop()
     
