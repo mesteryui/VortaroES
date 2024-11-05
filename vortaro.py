@@ -42,8 +42,8 @@ def busqueda():
         webframe.load_website(text_final)
 
 if __name__ == "__main__":
-    color_fondo = PALETTE.mocha.colors.mantle.hex
-    color_base = PALETTE.mocha.colors.base.hex
+    color_fondo = PALETTE.mocha.colors.base.hex
+    color_base = PALETTE.mocha.colors.mantle.hex
     color_texto = PALETTE.mocha.colors.text.hex
     color_boton = PALETTE.mocha.colors.surface2.hex
     color_boton_activo = PALETTE.mocha.colors.surface1.hex
@@ -56,7 +56,7 @@ if __name__ == "__main__":
     # Ajustes diversos de la ventana
     ventana.geometry("750x720")
     ventana.title("VortaroES")
-    ventana["bg"] = "#1e1e2e"
+    ventana["bg"] = color_fondo
     entry = ttk.Entry(ventana, width=30)
     entry.pack()
     frame = ttk.Frame(ventana,height=380, width=499)
