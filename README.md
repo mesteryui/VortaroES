@@ -10,6 +10,12 @@ A simple application that allows you to access the RAE dictionary, made in Tkint
 
 > [!WARNING]
 > Now the application only support search from the search bar but no if you click in the links, that won't work
+> also I inform that I don't understand completly tkinter for the apps
+
+> [!IMPORTANT]
+> By error some commits and push process was using another email because I have two github accounts
+> for that things so if in that section of github happens something I inform that is the same person
+
 # AppImage
 The AppImage versions (for GNU/Linux users) need `tkinter`, which can be installed with these commands depending on the distro:
 
